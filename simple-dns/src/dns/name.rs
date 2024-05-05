@@ -362,6 +362,10 @@ impl<'a> Label<'a> {
             data: self.data.into_owned().into(),
         }
     }
+
+    pub fn data(&'a self) -> &'a [u8] {
+        self.data.as_ref()
+    }
 }
 
 impl<'a> Display for Label<'a> {
